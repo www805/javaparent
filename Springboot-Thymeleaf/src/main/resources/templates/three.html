@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:title="${getThree}">Title</title>
+</head>
+<body>
+    <h1 th:text="${getThree}"></h1>
+
+    <!--遍历list集合-->
+    <ul th:each="va : ${list}">
+        <li th:text="${va}"></li>
+    </ul>
+
+    <p th:each="va:${list}" th:text="${va}"></p>   <!--遍历list集合，简写方式-->
+
+
+    <!--打印map-->
+    <ul th:each="map : ${map}">
+        <li th:text="${map.value}"></li>
+    </ul>
+
+    <!-- key和value 一起打印出来-->
+    <table>
+        <thead>
+            <th th:each="map:${map}" th:text="${map.key}" ></th>
+            <th th:each="map:${map}" th:text="${map.value}"></th>  <!--遍历map集合-->
+        </thead>
+    </table>
+
+</body>
+</html>
