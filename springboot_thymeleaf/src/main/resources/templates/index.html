@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="${title}"></h1>
+
+    <!--引入网页-->
+    <!--th:include="路径 :: 模板名称"-->
+    <div th:include="@{footer} :: companyInfo" th:with="projectName=百度"/>
+    <!--th:include=  文件路径-->
+    <!--th:with  传入的key和值-->
+</body>
+</html>

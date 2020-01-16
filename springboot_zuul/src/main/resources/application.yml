@@ -1,0 +1,16 @@
+server:
+  port: 9011
+spring:
+  application:
+    name: zhuang-manager #指定服务名
+eureka:
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    tensquare-gathering: #模板引擎服务
+      path: /thymeleaf/** #配置请求URL的请求规则
+      serviceId: zhuang-thymeleaf #指定Eureka注册中心中的服务id
