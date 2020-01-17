@@ -1,0 +1,9 @@
+
+server:
+    port: 6022 #服务端口
+
+
+jwt:
+    config:
+        key: zhuang
+        ttl: 360000

@@ -1,9 +1,9 @@
 
 server:
-    port: 6868 #·şÎñ¶Ë¿Ú
+    port: 6868 #æœåŠ¡ç«¯å£
 eureka:
     client:
-        regiter-with-eureka: false #ÊÇ·ñ½«×Ô¼º×¢²áµ½Eureka·şÎñÖĞ£¬±¾Éí¾ÍÊÇËùÓĞÎŞĞè×¢²á
-        fetch-registry: false  #ÊÇ·ñ´ÓEurekaÖĞ»ñÈ¡×¢²áĞÅÏ¢
-        service-url:  #Eureka¿Í»§¶ËÓëEureka·şÎñ¶Ë½øĞĞ½»»¥µÄµØÖ·
+        regiter-with-eureka: false #æ˜¯å¦å°†è‡ªå·±æ³¨å†Œåˆ°EurekaæœåŠ¡ä¸­ï¼Œæœ¬èº«å°±æ˜¯æ‰€æœ‰æ— éœ€æ³¨å†Œ
+        fetch-registry: false  #æ˜¯å¦ä»Eurekaä¸­è·å–æ³¨å†Œä¿¡æ¯
+        service-url:  #Eurekaå®¢æˆ·ç«¯ä¸EurekaæœåŠ¡ç«¯è¿›è¡Œäº¤äº’çš„åœ°å€
             defaultZone: http://127.0.0.1:${server.port}/eureka
