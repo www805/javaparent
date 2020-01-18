@@ -1,9 +1,6 @@
 package com.zhuang.jwt.util;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtBuilder;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -60,10 +57,19 @@ public class JwtUtil {
      * @return
      */
     public Claims parseJWT(String jwtStr){
-        return  Jwts.parser()
-                .setSigningKey(key)
-                .parseClaimsJws(jwtStr)
-                .getBody();
+
+        Claims claims = null;
+        try {
+            claims = Jwts.parser()
+                    .setSigningKey(key)
+                    .parseClaimsJws(jwtStr)
+                    .getBody();
+        } catch (Exception e) {
+//            claims.set
+            System.out.println("JWT解密错误，或过期了");
+        }
+
+        return claims;
     }
 
 }

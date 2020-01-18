@@ -6,4 +6,4 @@ server:
 jwt:
     config:
         key: zhuang
-        ttl: 360000
+        ttl: 60000
